@@ -76,6 +76,11 @@ function calculateScore() {
             dice[1].innerHTML =    '<img src="images/d6-side1.png" alt="Dice" class="dieImage" id="die2"></img>';
             dice[2].innerHTML =    '<img src="images/d6-side1.png" alt="Dice" class="dieImage" id="die3"></img>';
             dice[3].innerHTML =    '<img src="images/d6-side1.png" alt="Dice" class="dieImage" id="die4"></img>';
+            rotation = 0;
+            dice[0].style.transform = `rotate(${rotation}deg)`;
+            dice[1].style.transform = `rotate(${rotation}deg)`;
+            dice[2].style.transform = `rotate(${rotation}deg)`;
+            dice[3].style.transform = `rotate(${rotation}deg)`;
             enemyScore.innerHTML = "";
             score.innerHTML = "";
             rolled1 = false;
@@ -103,6 +108,8 @@ function calculateScore() {
                 round++
                 roundDisplay.innerHTML = round;
             }
+            rotation = 0;
+
         },1500)
     }
 }

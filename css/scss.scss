@@ -58,8 +58,10 @@ footer {
     position: fixed; 
     bottom:0%;
     width: 900px; 
-    border: solid 2px black;
     text-align: center;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
 }
 
 .button {
@@ -106,4 +108,9 @@ footer {
   #history>p {
       text-decoration: none;
       text-decoration-style: none;
+  }
+
+  .bottomButton {
+    border: solid 2px black;
+    padding: 5px;
   }

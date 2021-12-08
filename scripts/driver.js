@@ -16,6 +16,22 @@ let gamesDisplay = document.getElementById("games");
 
 let gameHistory = document.getElementById("history")
 
+let resetButton = document.getElementById("resetButton")
+
+resetButton.addEventListener("click", function() {
+    yourTotal = 0;
+    totalScore.innerHTML = "";
+    enemyTotal = 0;
+    totalEnemyScore.innerHTML = "";
+    round = 1;
+    roundDisplay.innerHTML = round
+    rotation = 0;
+    dice[0].style.transform = `rotate(${rotation}deg)`;
+    dice[1].style.transform = `rotate(${rotation}deg)`;
+    dice[2].style.transform = `rotate(${rotation}deg)`;
+    dice[3].style.transform = `rotate(${rotation}deg)`;
+})
+
 ruleButton.addEventListener("click", function() {
     $rulesDisplay.fadeToggle();
 })

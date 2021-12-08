@@ -58,8 +58,10 @@ footer {
   position: fixed;
   bottom: 0%;
   width: 900px;
-  border: solid 2px black;
   text-align: center;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
 }
 
 .button {
@@ -116,4 +118,9 @@ footer {
   text-decoration: none;
   -webkit-text-decoration-style: none;
           text-decoration-style: none;
+}
+
+.bottomButton {
+  border: solid 2px black;
+  padding: 5px;
 }
