@@ -109,7 +109,6 @@ function calculateScore() {
                 roundDisplay.innerHTML = round;
             }
             rotation = 0;
-
         },1500)
     }
 }
