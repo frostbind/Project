@@ -43,6 +43,9 @@ function calculateScore() {
     if (value3 == 0 || value4 == 0) {
         score.innerHTML = 0;
         sum1 = 0;
+    } else if (value4 == value3) {
+        sum1 = value3*4;
+        score.innerHTML = sum1
     } else {
         sum1 = value3+1 + value4+1;
         score.innerHTML = sum1;
@@ -51,7 +54,10 @@ function calculateScore() {
     if (value1 == 0 || value2 == 0) {
         enemyScore.innerHTML = 0;
         sum2 = 0
-    } else {
+    } else if (value4 == value3) {
+        sum2 = value1*4;
+        enemyScore.innerHTML = sum2
+    }else {
         sum2 = value1+1 + value2+1;
         enemyScore.innerHTML = sum2
     }

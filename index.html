@@ -17,8 +17,8 @@
     <div id="wrapper">
         <header>
             <h1>Victor's Roll</h1>
-            <h2>Round: <span id="round">1</span></h2>
         </header>
+        <h2>Round: <span id="round">1</span></h2>
         <main>
             <div class="opponentDice diceField">
                 <div class="diceBoxes">
@@ -47,8 +47,26 @@
                 <p>Your Total Score: <span id="totalScore"></span></p>
             </div>
         </main>
+        <h2>Game: <span>1</span></h2>
+        <div id="history"></div>
+        <div class="popUpBackground" id="popUp">
+            <div class="popUp">
+                <div class="popUpHead">
+                    <h3>Hello, User</h3>
+                    <button class="button" id="close">Close</button>
+                </div>
+                <p>Instructions:</p>
+                <br>
+                <p>The game will take place over three rounds. During each round, you will roll two dice and determine which was the higher score by adding the two dice together</p>
+                <p>If you roll the same number with both dice, your current score is multiplied by two</p>
+                <p>However, if you roll a one with either of your dice, your current score is set to zero for that round</p>
+                <p>Whichever player has the highest score at the end of round three is the winner</p>
+            </div>
+        </div>
         <footer>
-
+            <div id="rulesButton">
+                <p>Rules</p>
+            </div>
         </footer>
     </div>
 </body>

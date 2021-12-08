@@ -8,6 +8,18 @@ let roundDisplay = document.getElementById("round");
 let nodeDice = document.querySelectorAll(".diceBox");
 let dice = Array.from(nodeDice);
 
+let ruleButton = document.getElementById("rulesButton");
+let $rulesDisplay = $("#popUp")
+let closeButton = document.getElementById("close");
+
+ruleButton.addEventListener("click", function() {
+    $rulesDisplay.css("display", "inline");
+})
+
+closeButton.addEventListener("click", function() {
+    $rulesDisplay.css("display", "none");
+})
+
 dice[2].addEventListener("click", function() {
     if (!rolled1) {
         rolled1 = true;
