@@ -47,3 +47,8 @@ main {
   justify-content: flex-start;
   flex-direction: column;
 }
+
+h2 {
+  background-color: lightgrey;
+  text-align: center;
+}

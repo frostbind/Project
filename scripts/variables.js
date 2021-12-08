@@ -18,10 +18,15 @@ let value2 = -1;
 let value3 = -1;
 let value4 = -1;
 
-let previousScore = 0;
-let previousEnemyScore = 0;
-
 let rolled1 = false;
 let rolled2 = false;
+
+let enemyTotal = 0;
+let yourTotal = 0;
+
+let sum1 = 0;
+let sum2 = 0;
+
+let round = 1;
 
 console.log("Variables Loaded");

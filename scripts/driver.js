@@ -1,6 +1,9 @@
 console.log("Driver Loaded");
 let score = document.getElementById("score");
 let enemyScore = document.getElementById("enemyScore");
+let totalScore = document.getElementById("totalScore");
+let totalEnemyScore = document.getElementById("enemyTotal");
+let roundDisplay = document.getElementById("round");
 
 let nodeDice = document.querySelectorAll(".diceBox");
 let dice = Array.from(nodeDice);
@@ -17,9 +20,9 @@ dice[2].addEventListener("click", function() {
                 value1 = Math.floor(Math.random()*numberOfSides)
                 dice[0].innerHTML = `<img src="${imageFolder}/${diceSides[value1]}" alt="">`
                 calculateScore();
-            },2000)
+            },500)
             animateDice1 = requestAnimationFrame(rollDie1)
-        }, 2000);
+        }, 500);
         animateDice3 = requestAnimationFrame(rollDie3)
     }
    
@@ -36,9 +39,9 @@ dice[3].addEventListener("click", function() {
                 value2 = Math.floor(Math.random()*numberOfSides)
                 dice[1].innerHTML = `<img src="${imageFolder}/${diceSides[value2]}" alt="">`
                 calculateScore()
-            },2000)
+            },500)
             animateDice2 = requestAnimationFrame(rollDie2)
-        }, 2000);
+        }, 500);
         animateDice4 = requestAnimationFrame(rollDie4)
     }
     

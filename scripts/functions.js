@@ -40,11 +40,61 @@ function rollDie4() {
 }
 
 function calculateScore() {
-    score.innerHTML = value3+1 + value4+1;
-    previousScore = score;
-    enemyScore.innerHTML = value1+1 + value2+1;
-    previousEnemyScore = enemyScore;
+    if (value3 == 0 || value4 == 0) {
+        score.innerHTML = 0;
+        sum1 = 0;
+    } else {
+        sum1 = value3+1 + value4+1;
+        score.innerHTML = sum1;
+    }
+    
+    if (value1 == 0 || value2 == 0) {
+        enemyScore.innerHTML = 0;
+        sum2 = 0
+    } else {
+        sum2 = value1+1 + value2+1;
+        enemyScore.innerHTML = sum2
+    }
 
+    if (rolled1 && rolled2) {
+        yourTotal += sum1;
+        enemyTotal += sum2;
+        totalEnemyScore.innerHTML = enemyTotal;
+        totalScore.innerHTML = yourTotal;
+        value1 = 0
+        value2 = 0
+        value3 = 0
+        value4 = 0
+        setTimeout(function(){
+            dice[0].innerHTML =    '<img src="images/d6-side1.png" alt="Dice" class="dieImage" id="die1"></img>';
+            dice[1].innerHTML =    '<img src="images/d6-side1.png" alt="Dice" class="dieImage" id="die2"></img>';
+            dice[2].innerHTML =    '<img src="images/d6-side1.png" alt="Dice" class="dieImage" id="die3"></img>';
+            dice[3].innerHTML =    '<img src="images/d6-side1.png" alt="Dice" class="dieImage" id="die4"></img>';
+            enemyScore.innerHTML = "";
+            score.innerHTML = "";
+            rolled1 = false;
+            rolled2 = false;
+
+            if (round == 3) {
+                if (yourTotal > enemyTotal) {
+                    alert("YOU WIN")
+                } else if (yourTotal < enemyTotal) {
+                    alert("YOU LOSE")
+                } else {
+                    alert("ITS A TIE")
+                }
+                yourTotal = 0;
+                totalScore.innerHTML = "";
+                enemyTotal = 0;
+                totalEnemyScore.innerHTML = "";
+                round = 1;
+                roundDisplay.innerHTML = round
+            } else {
+                round++
+                roundDisplay.innerHTML = round;
+            }
+        },1000)
+    }
 }
 
 
