@@ -16,11 +16,34 @@
 <body>
     <div id="wrapper">
         <header>
-
+            <h1>Victor's Roll</h1>
         </header>
         <main>
-            <div>
-                <img src="" alt="Dice">
+            <div class="opponentDice diceField">
+                <div class="diceBoxes">
+                    <div class="diceBox">
+                        <img src="images/d6-side1.png" alt="Dice" class="dieImage" id="die1">
+                    </div>
+                    <div class="diceBox">
+                        <img src="images/d6-side1.png" alt="Dice" class="dieImage" id="die2">
+                    </div>
+                </div>
+                <p>Opponent's Dice</p>
+                <p>Opponent's Current Score: <span id="enemyScore"></span></p>
+                <p>Opponent's Total Score: <span id="enemyTotal"></span></p>
+            </div>
+            <div class="yourDice diceField">
+                <div class="diceBoxes">
+                    <div class="diceBox">
+                        <img src="images/d6-side1.png" alt="Dice" class="dieImage" id="die3">
+                    </div>
+                    <div class="diceBox">
+                        <img src="images/d6-side1.png" alt="Dice" class="dieImage" id="die4">
+                    </div>
+                </div>
+                <p>Your Dice</p>
+                <p>Your Current Score: <span id="score"></span></p>
+                <p>Your Total Score: <span id="toalScore"></span></p>
             </div>
         </main>
         <footer>
