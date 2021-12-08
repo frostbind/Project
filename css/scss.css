@@ -111,3 +111,9 @@ footer {
   flex-direction: row;
   justify-content: space-between;
 }
+
+#history > p {
+  text-decoration: none;
+  -webkit-text-decoration-style: none;
+          text-decoration-style: none;
+}

@@ -89,17 +89,21 @@ function calculateScore() {
                 } else {
                     alert("ITS A TIE")
                 }
+                historyBar.newEntry(yourTotal, enemyTotal, games);
                 yourTotal = 0;
                 totalScore.innerHTML = "";
                 enemyTotal = 0;
                 totalEnemyScore.innerHTML = "";
                 round = 1;
                 roundDisplay.innerHTML = round
+                games++;
+                gamesDisplay.innerHTML = games;
+                historyBar.displayEntries();
             } else {
                 round++
                 roundDisplay.innerHTML = round;
             }
-        },1000)
+        },1500)
     }
 }
 

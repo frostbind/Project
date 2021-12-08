@@ -28,6 +28,34 @@ let sum1 = 0;
 let sum2 = 0;
 
 let round = 1;
+let games = 1;
+
+const historyBar = {
+    wins:0,
+    loses:0,
+    winrate:0,
+    gamesPlayed:[],
+    newEntry:function(yourScore, enemyScore, game) {
+        this.gamesPlayed.push("<p>")
+        if (yourScore > enemyScore) {
+            this.wins++
+            this.gamesPlayed.push(`Game: ${game}. You won by ${yourScore-enemyScore} points. Your winrate against your opponent is`);
+        } else if (yourScore < enemyScore) {
+            this.loses++
+            this.gamesPlayed.push(`Game: ${game}. You lost by ${enemyScore-yourScore} points. Your winrate against your opponent is`);
+        }
+        if (this.wins == 0 && this.loses == 0) {
+            this.winrate = 1;
+        } else {
+            this.winrate = this.wins/(this.wins+this.loses);
+        }
+        this.gamesPlayed.push(` ${this.winrate * 100}%`)
+        this.gamesPlayed.push("</p>")
+    },
+    displayEntries: function() {
+        gameHistory.innerHTML = this.gamesPlayed;
+    }
+}
 
 console.log("Variables Loaded");
 

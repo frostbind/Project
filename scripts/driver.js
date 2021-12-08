@@ -12,12 +12,16 @@ let ruleButton = document.getElementById("rulesButton");
 let $rulesDisplay = $("#popUp")
 let closeButton = document.getElementById("close");
 
+let gamesDisplay = document.getElementById("games");
+
+let gameHistory = document.getElementById("history")
+
 ruleButton.addEventListener("click", function() {
-    $rulesDisplay.css("display", "inline");
+    $rulesDisplay.fadeToggle();
 })
 
 closeButton.addEventListener("click", function() {
-    $rulesDisplay.css("display", "none");
+    $rulesDisplay.fadeToggle();
 })
 
 dice[2].addEventListener("click", function() {
@@ -34,7 +38,7 @@ dice[2].addEventListener("click", function() {
                 calculateScore();
             },500)
             animateDice1 = requestAnimationFrame(rollDie1)
-        }, 500);
+        }, 250);
         animateDice3 = requestAnimationFrame(rollDie3)
     }
    
@@ -53,7 +57,7 @@ dice[3].addEventListener("click", function() {
                 calculateScore()
             },500)
             animateDice2 = requestAnimationFrame(rollDie2)
-        }, 500);
+        }, 250);
         animateDice4 = requestAnimationFrame(rollDie4)
     }
     
